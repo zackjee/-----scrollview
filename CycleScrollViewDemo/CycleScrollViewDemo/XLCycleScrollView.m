@@ -107,6 +107,9 @@
     [_curViews addObject:[_datasource pageAtIndex:pre]];
     [_curViews addObject:[_datasource pageAtIndex:page]];
     [_curViews addObject:[_datasource pageAtIndex:last]];
+    if ([_delegate respondsToSelector:@selector(didScrollToIndex:)]) {
+        [_delegate didScrollToIndex:_curPage];
+    }
 }
 
 - (int)validPageValue:(NSInteger)value {

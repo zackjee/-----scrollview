@@ -70,4 +70,15 @@
     [alert release];
 }
 
+- (void)didScrollToIndex:(NSInteger)index
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                    message:[NSString stringWithFormat:@"当前滚动到第%d个页面",index]
+                                                   delegate:self
+                                          cancelButtonTitle:@"确定"
+                                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+}
+
 @end

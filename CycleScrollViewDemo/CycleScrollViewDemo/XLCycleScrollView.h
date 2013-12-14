@@ -39,7 +39,9 @@
 @protocol XLCycleScrollViewDelegate <NSObject>
 
 @optional
+
 - (void)didClickPage:(XLCycleScrollView *)csView atIndex:(NSInteger)index;
+- (void)didScrollToIndex:(NSInteger)index;
 
 @end
 
